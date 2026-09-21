@@ -1,0 +1,61 @@
+{
+    "project": "CYBER-137",
+    "description": "Detecting Secrets Across Version Control History and Live Systems",
+    "generated_at": "2026-09-21T10:31:07.107765",
+    "repository": "test_repository",
+    "commits_scanned": 4,
+    "findings_count": 3,
+    "summary": {
+        "valid_credentials": 2,
+        "invalid_credentials": 1,
+        "rotations_completed": 2,
+        "verifications_passed": 2
+    },
+    "findings": [
+        {
+            "evidence_id": "CYBER-CE820E6994",
+            "commit": "7b7635f6",
+            "file": "config.py",
+            "type": "API_KEY",
+            "masked_secret": "CYBER1**********************K91X",
+            "fingerprint": "63c281c0f58f83e8016c495f1d9e42cd0e93c9883ee7237a97645fc9c2042da6",
+            "entropy": 4.31,
+            "status": "DETECTED",
+            "severity": "HIGH",
+            "validation": "VALID",
+            "rotation": "COMPLETED",
+            "replacement": "CYBER137_ROTATED_7b7635f6",
+            "verification": "PASSED"
+        },
+        {
+            "evidence_id": "CYBER-B8816F9BA6",
+            "commit": "7b7635f6",
+            "file": "config.py",
+            "type": "TOKEN",
+            "masked_secret": "CYBER1***********************2345",
+            "fingerprint": "506728299f957d5414731231debec6609797dcf7cc5440f161f4d6ac5ccc0f4e",
+            "entropy": 4.29,
+            "status": "DETECTED",
+            "severity": "HIGH",
+            "validation": "INVALID",
+            "rotation": "NOT_REQUIRED",
+            "replacement": null,
+            "verification": "NOT_REQUIRED"
+        },
+        {
+            "evidence_id": "CYBER-65A5E696B9",
+            "commit": "7b7635f6",
+            "file": "config.py",
+            "type": "PASSWORD",
+            "masked_secret": "CYBER1*****************_123",
+            "fingerprint": "7ea768e4b7859fa6b5d30516ce5071b6cfe52b84bb9969eb2582e08f88c9f04a",
+            "entropy": 4.13,
+            "status": "DETECTED",
+            "severity": "HIGH",
+            "validation": "VALID",
+            "rotation": "COMPLETED",
+            "replacement": "CYBER137_ROTATED_7b7635f6",
+            "verification": "PASSED"
+        }
+    ]
+}
